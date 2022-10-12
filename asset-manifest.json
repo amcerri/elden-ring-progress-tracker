@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/elden-ring-progress-tracker/static/css/main.31d6cfe0.css",
+    "main.js": "/elden-ring-progress-tracker/static/js/main.6c0661de.js",
+    "static/js/787.e56a0a3c.chunk.js": "/elden-ring-progress-tracker/static/js/787.e56a0a3c.chunk.js",
+    "index.html": "/elden-ring-progress-tracker/index.html",
+    "main.6c0661de.js.map": "/elden-ring-progress-tracker/static/js/main.6c0661de.js.map",
+    "787.e56a0a3c.chunk.js.map": "/elden-ring-progress-tracker/static/js/787.e56a0a3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.6c0661de.js"
+  ]
+}
