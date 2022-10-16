@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .temp {
+        @apply text-2xl;
+    }
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+/* Hamburguer Menu */
+
+.hamburguer {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburguer-top,
+.hamburguer-middle,
+.hamburguer-bottom {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #FFF;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburguer-middle {
+    transform: translateY(8px);
+}
+
+.hamburguer-bottom {
+    transform: translateY(16px);
+}
+
+.hamburguer--active {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.hamburguer--active .hamburguer-top {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburguer--active .hamburguer-middle {
+    display: none;
+}
+
+.hamburguer--active .hamburguer-bottom {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
