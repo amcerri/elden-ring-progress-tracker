@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "mantinia";
+    src: url("./assets/fonts/mantinia_regular.otf");
+}
+
 @layer components {
-    .temp {
-        @apply text-2xl;
+    .menu-mobile--active {
+        @apply px-4 py-2 rounded-md bg-yellow-800;
+    }
+
+    .menu-mobile--inactive {
+        @apply px-4 py-2;
+    }
+
+    .menu-desktop--active {
+        @apply text-neutral-100 pb-1 border-b-2 rounded-md border-yellow-800;
+    }
+
+    .menu-desktop--inactive {
+        @apply text-neutral-400;
     }
 }
 
@@ -18,7 +35,7 @@ body {
     cursor: pointer;
     width: 24px;
     height: 24px;
-    transition: all 0.25s;
+    transition: all 0.15s;
     position: relative;
 }
 
@@ -26,13 +43,13 @@ body {
 .hamburguer-middle,
 .hamburguer-bottom {
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: 0;
     width: 24px;
     height: 2px;
     background-color: #FFF;
     transform: rotate(0);
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .hamburguer-middle {
