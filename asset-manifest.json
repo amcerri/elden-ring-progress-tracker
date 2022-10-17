@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/elden-ring-progress-tracker/static/css/main.af6a2c56.css",
-    "main.js": "/elden-ring-progress-tracker/static/js/main.7d9c595c.js",
+    "main.js": "/elden-ring-progress-tracker/static/js/main.649d0ccf.js",
     "static/js/787.e56a0a3c.chunk.js": "/elden-ring-progress-tracker/static/js/787.e56a0a3c.chunk.js",
     "static/media/logo.png": "/elden-ring-progress-tracker/static/media/logo.23982cc9e0ec8eeecc30.png",
     "static/media/mantinia_regular.otf": "/elden-ring-progress-tracker/static/media/mantinia_regular.17509f704db56aefbca6.otf",
     "index.html": "/elden-ring-progress-tracker/index.html",
     "main.af6a2c56.css.map": "/elden-ring-progress-tracker/static/css/main.af6a2c56.css.map",
-    "main.7d9c595c.js.map": "/elden-ring-progress-tracker/static/js/main.7d9c595c.js.map",
+    "main.649d0ccf.js.map": "/elden-ring-progress-tracker/static/js/main.649d0ccf.js.map",
     "787.e56a0a3c.chunk.js.map": "/elden-ring-progress-tracker/static/js/787.e56a0a3c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af6a2c56.css",
-    "static/js/main.7d9c595c.js"
+    "static/js/main.649d0ccf.js"
   ]
 }
