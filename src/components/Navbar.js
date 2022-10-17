@@ -4,18 +4,18 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const links = [
-    { to: "/elden-ring-progress-tracker", element: "Playthrough" },
+    { to: "/", element: "Playthrough" },
     {
-      to: "/elden-ring-progress-tracker/achievements",
+      to: "/achievements",
       element: "Achievements",
     },
     {
-      to: "/elden-ring-progress-tracker/weapons",
+      to: "/weapons",
       element: "Weapons & Shields",
     },
-    { to: "/elden-ring-progress-tracker/armor", element: "Armor Sets" },
-    { to: "/elden-ring-progress-tracker/misc", element: "Misc" },
-    { to: "/elden-ring-progress-tracker/faq", element: "FAQ" },
+    { to: "/armor", element: "Armor Sets" },
+    { to: "/misc", element: "Misc" },
+    { to: "/faq", element: "FAQ" },
   ];
 
   const currentLocation = useLocation().pathname;

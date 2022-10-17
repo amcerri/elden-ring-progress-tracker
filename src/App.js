@@ -1,13 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <Navbar />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
