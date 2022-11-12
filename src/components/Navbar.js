@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  // Location links
   const links = [
     { to: "/", element: "Playthrough" },
     {
@@ -26,13 +27,26 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when the user clicks outside of it
+  React.useEffect(() => {
+    const closeMenu = (e) => {
+      if (!e.target.classList.contains("menu-btn")) {
+        if (isMenuOpen) {
+          setIsMenuOpen(false);
+        }
+      }
+    };
+    document.addEventListener("click", closeMenu);
+    return () => document.removeEventListener("click", closeMenu);
+  }, [isMenuOpen]);
+
 
   return (
-    <header className="bg-black text-white">
-      <nav className="relative container mx-auto p-2">
-        <div className="flex h-12 space-x-6 py-2 my-auto items-center md:h-24">
+    <header className="sticky bg-black text-white">
+      <nav className="container p-2 md:mx-auto">
+        <div className="relative flex h-12 space-x-6 py-2 my-auto items-center md:h-24">
           {/* Logo */}
-          <Link to="/elden-ring-progress-tracker" className="h-full">
+          <Link to="/" className="h-full">
             <img
               src={logo}
               className="hidden h-full md:block"
@@ -41,7 +55,7 @@ const Navbar = () => {
           </Link>
           {/* Hamburguer Icon */}
           <button
-            className={`block hamburguer menu-btn md:hidden ${
+            className={`block hamburguer md:hidden ${
               isMenuOpen ? "hamburguer--active" : ""
             }`}
             onClick={toggleMenu}
@@ -53,10 +67,9 @@ const Navbar = () => {
           {/* Heading and Menu */}
           <div className="w-full space-y-3">
             {/* Heading */}
-            <span className="text-lg font-mantinia md:text-4xl">E</span>
-            <span className="text-md font-mantinia md:text-2xl">
-              LDEN RING PROGRESS TRACKER
-            </span>
+            <p className="text-md font-mantinia md:text-2xl md:first-letter:text-3xl">
+              ELDEN RING PROGRESS TRACKER
+            </p>
             {/* Menu (Desktop) */}
             <ul className="hidden md:flex items-center space-x-6">
               {links.map((link, index) => (
@@ -78,7 +91,7 @@ const Navbar = () => {
         </div>
         {/* Menu Mobile */}
         <ul
-          className={`flex-col px-8 py-4 space-y-2 md:hidden ${
+          className={`absolute left-0 flex-col w-full px-8 py-4 space-y-2 rounded-md bg-black md:hidden ${
             isMenuOpen ? "flex" : "hidden"
           }`}
         >
